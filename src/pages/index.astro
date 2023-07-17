@@ -15,8 +15,8 @@ import Layout from '../layouts/Layout.astro';
 		<AboutSection />
 		<RecentProjecsSection />
 		<SkillsSection />
-		<EducationSection />
-		<ContactMeSection />
+		<EducationSection client:only={true} />
+		<ContactMeSection client:visible={true} />
 		<RecentBlogPostsSection />
 	</main>
 </Layout>

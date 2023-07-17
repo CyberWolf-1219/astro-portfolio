@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         pallet: {
           primary: '#272727',
+          'primary-light': '#303030',
           secondary: '#4F98CA',
           accent: '#50D890',
           light: '#EFFFFB',

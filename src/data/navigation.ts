@@ -1,31 +1,15 @@
 export const TOP_NAV_LINKS = [
   {
-    text: 'Home.Welcome',
+    text: 'Home',
     link: '/',
   },
   {
-    text: 'Home.AboutMe',
-    link: '/',
+    text: 'Gigs',
+    link: '/gigs',
   },
   {
-    text: 'Home.Portfolio',
-    link: '/',
-  },
-  {
-    text: 'Home.Skills',
-    link: '/',
-  },
-  {
-    text: 'Home.Education',
-    link: '/',
-  },
-  {
-    text: 'Home.ContactMe',
-    link: '/',
-  },
-  {
-    text: 'Home.RecentBlogPosts',
-    link: '/',
+    text: 'Blog',
+    link: '/blog',
   },
 ];
 

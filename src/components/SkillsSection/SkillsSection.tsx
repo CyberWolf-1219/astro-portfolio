@@ -7,9 +7,9 @@ function SkillsSection() {
       <div>
         <h2>@Skills Section&gt;_</h2>
         <div className={'w-full h-fit py-[5px] bg-pallet-primary-light'}>
-          <code className={'w-full h-fit  text-pallet-accent'}>
+          <code className={'w-full h-fit text-pallet-accent'}>
             brain@dev&gt; ls user-skills
-            <ul className={'w-full h-fit'}>
+            <ul className={'w-full h-fit md:columns-3'}>
               <li>---&nbsp;&nbsp;&nbsp;&nbsp;.</li>
               <li>---&nbsp;&nbsp;&nbsp;&nbsp;..</li>
               {USER_SKILLS.map((skill) => {

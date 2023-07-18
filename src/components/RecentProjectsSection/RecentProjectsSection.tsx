@@ -9,9 +9,8 @@ function RecentProjectsSection() {
         <h2>@Recent Projects Section&gt;_</h2>
         <ul
           className={
-            'w-full h-fit pb-[5px] flex flex-row items-center justify-start snap-x overflow-x-auto'
+            'w-full h-fit pb-[5px] flex flex-row items-center justify-start  md:grid grid-cols-3 gap-[10px] snap-x overflow-x-auto'
           }>
-          <FeaturedProjectCard />
           <FeaturedProjectCard />
           <FeaturedProjectCard />
           <FeaturedProjectCard />

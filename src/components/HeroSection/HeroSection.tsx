@@ -3,7 +3,10 @@ import React from 'react';
 function HeroSection() {
   return (
     <section id={'about'}>
-      <div>
+      <div
+        className={
+          'md:aspect-[16/9] flex flex-col items-center justify-center'
+        }>
         <h1
           className={
             'text-center text-pallet-light border-y-[2px] border-pallet-light '

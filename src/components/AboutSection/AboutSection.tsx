@@ -5,15 +5,15 @@ function AboutSection() {
     <section>
       <div className={'w-full h-fit'}>
         <h2>@About Section&gt;_</h2>
-        <div>
+        <div className={'w-full h-fit flex flex-row items-start justify-start'}>
           <img
             src=''
             alt=''
             className={
-              'aspect-[4/5] w-full max-w-[500px] h-auto bg-pallet-accent'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] w-full max-w-[400px] h-auto md:mr-[10px] bg-pallet-accent'
             }
           />
-          <p className={'text-justify'}>
+          <p className={'text-justify md:columns-2 lg:columns-3'}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore
             aliquam omnis quae illo sed, obcaecati quos autem pariatur suscipit
             deleniti assumenda eligendi unde incidunt. Adipisci commodi

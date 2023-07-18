@@ -140,7 +140,7 @@ function ContactMeSection() {
             ref={textarea}
             id='email_input'
             className={
-              'aspect-[1/1] w-full h-auto p-[10px] bg-pallet-accent/70 text-pallet-primary font-semibold'
+              'aspect-[1/1] md:aspect-[16/9] w-full h-auto p-[10px] bg-pallet-accent/70 text-pallet-primary font-semibold'
             }></textarea>
         </form>
       </div>

@@ -16,7 +16,7 @@ function Window({ closeFunction, folderName, files }: Props) {
   }
 
   return (
-    <div className={'w-full h-fit'}>
+    <div className={'w-full h-full'}>
       <div
         className={
           'w-full h-fit pl-[10px] flex flex-row items-center justify-between bg-pallet-accent/50 border-[2px] border-pallet-accent border-b-transparent'
@@ -32,7 +32,7 @@ function Window({ closeFunction, folderName, files }: Props) {
       </div>
       <div
         className={
-          'w-full h-fit max-h-full p-[10px] grid grid-cols-3 gap-[20px] justify-items-center bg-pallet-accent/80 border-[2px] border-pallet-accent overflow-y-scroll'
+          'w-full h-fit max-h-full p-[10px] grid grid-cols-3 lg:grid-cols-5 gap-[20px] justify-items-center bg-pallet-accent/80 border-[2px] border-pallet-accent overflow-y-auto'
         }>
         {files.map((file, index) => {
           return (

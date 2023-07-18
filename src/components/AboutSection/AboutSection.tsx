@@ -5,7 +5,10 @@ function AboutSection() {
     <section>
       <div className={'w-full h-fit'}>
         <h2>@About Section&gt;_</h2>
-        <div className={'w-full h-fit flex flex-row items-start justify-start'}>
+        <div
+          className={
+            'w-full h-fit flex flex-col lg:flex-row items-start justify-start'
+          }>
           <img
             src=''
             alt=''

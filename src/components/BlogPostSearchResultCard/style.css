@@ -1,0 +1,39 @@
+.BlogPostSearchResultCard {
+    opacity: 0;
+    transform: translateY(10%);
+    animation: slide_up 500ms ease-out 1 normal forwards;
+    -webkit-animation: slide_up 500ms ease-out 1 normal forwards;
+    -webkit-transform: translateY(10%);
+    -moz-transform: translateY(10%);
+    -ms-transform: translateY(10%);
+    -o-transform: translateY(10%);
+}
+
+@keyframes slide_up {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+        -webkit-transform: translateY(10%);
+        -moz-transform: translateY(10%);
+        -ms-transform: translateY(10%);
+        -o-transform: translateY(10%);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-5%);
+        -webkit-transform: translateY(-5%);
+        -moz-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+        -o-transform: translateY(-5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }
+}

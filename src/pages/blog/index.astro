@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogSearchPanel from '../../components/BlogSearchPanel/BlogSearchPanel';
+---
+
+<Layout title={'Lahiru A. Rajakaruna|Blog'}>
+  <main>
+    <BlogSearchPanel client:only={true} />
+  </main>
+</Layout>

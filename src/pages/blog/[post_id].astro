@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogPostLayout from '../../components/BlogPostLayout/BlogPostLayout';
+
+export function getStaticPaths() {
+  return [
+    { params: { post_id: 1 } },
+    { params: { post_id: 2 } },
+    { params: { post_id: 3 } },
+  ];
+}
+const params = Astro.params;
+console.log(Astro);
+---
+
+<Layout title={`Post ${params.post_id} Title`}>
+  <main>
+    <BlogPostLayout postID={parseInt(params.post_id!)} />
+  </main>
+</Layout>

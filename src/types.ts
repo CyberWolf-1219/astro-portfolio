@@ -12,3 +12,18 @@ export type BlogPostSnippet = {
   tags: string[];
   link: string;
 };
+
+export type BlogPost = {
+  postID: number;
+  createdDate: string;
+  author: string;
+  sections: BlogPostSection[];
+};
+
+export type BlogPostSection = {
+  type: 'hero' | 'sub';
+  heading: string;
+  text: string[];
+  imageLink?: string;
+  links?: Array<{ caption: string; link: string }>;
+};

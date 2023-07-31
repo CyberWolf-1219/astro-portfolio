@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Logo/Logo';
-import { TOP_NAV_LINKS } from '../../data/navigation';
+import { TOP_NAV_LINKS } from '../../../data/navigation';
 
 function Navigation() {
   return (

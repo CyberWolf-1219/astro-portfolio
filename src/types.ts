@@ -24,6 +24,9 @@ export type BlogPostSection = {
   type: 'hero' | 'sub';
   heading: string;
   text: string[];
-  imageLink?: string;
+  image?: {
+    link: string;
+    caption: string;
+  };
   links?: Array<{ caption: string; link: string }>;
 };

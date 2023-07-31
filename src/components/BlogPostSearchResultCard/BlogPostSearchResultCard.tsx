@@ -3,11 +3,12 @@ import './style.css';
 import type { BlogPostSnippet } from '../../types';
 
 interface Props {
+  postIndex: number;
   post: BlogPostSnippet;
   animationDelay: number;
 }
 
-function BlogPostSearchResultCard({ post, animationDelay }: Props) {
+function BlogPostSearchResultCard({ postIndex, post, animationDelay }: Props) {
   return (
     <article
       style={{ animationDelay: `${animationDelay}ms` }}
@@ -39,7 +40,8 @@ function BlogPostSearchResultCard({ post, animationDelay }: Props) {
       </p>
       <p className={'w-full h-fit mt-auto text-left'}>
         <a
-          href={post.link}
+          // href={post.link}
+          href={`/blog/${postIndex}`}
           className={'font-bold'}>
           Read Post &gt;&gt;
         </a>

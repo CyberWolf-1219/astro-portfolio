@@ -28,7 +28,15 @@ function BlogPostLayout({ postID }: Props) {
     <>
       {blogPost.sections.map((section, index) => {
         if (section.type == 'hero') {
-          return <BlogPostHeroSection />;
+          return (
+            <BlogPostHeroSection
+              heading={section.heading}
+              image={section.image!}
+              summaryText={section.text}
+              createdDate={blogPost.createdDate}
+              author={blogPost.author}
+            />
+          );
         } else {
           return <BlogPostSubSection data={section} />;
         }

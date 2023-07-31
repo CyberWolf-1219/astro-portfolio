@@ -11,11 +11,11 @@ function BlogPostSubSection({ data }: Props) {
       <div>
         <h2>{data.heading}</h2>
         {/* IF THERE IS AN IMAGE RENDER IT */}
-        {data.imageLink ? (
+        {data.image ? (
           <figure>
             <img
-              src={data.imageLink}
-              alt=''
+              src={data.image.link}
+              alt={data.image.caption}
             />
           </figure>
         ) : null}

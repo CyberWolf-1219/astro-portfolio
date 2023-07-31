@@ -1,13 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogPostLayout from '../../components/BlogPostLayout/BlogPostLayout';
+import { BLOG_POSTS } from '../../data/blogposts';
 
 export function getStaticPaths() {
-  return [
-    { params: { post_id: 1 } },
-    { params: { post_id: 2 } },
-    { params: { post_id: 3 } },
-  ];
+  const PATHS = BLOG_POSTS.map((post, index) => {
+    return { params: { post_id: index } };
+  });
+  return PATHS;
 }
 const params = Astro.params;
 console.log(Astro);

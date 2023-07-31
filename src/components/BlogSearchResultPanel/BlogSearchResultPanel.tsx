@@ -18,6 +18,7 @@ function BlogSearchResultPanel({ blogPosts }: Props) {
             key={`blog_search_result_${Math.random()}`}
             className={'w-full h-fit overflow-hidden'}>
             <BlogPostSearchResultCard
+              postIndex={index}
               post={blogPost}
               animationDelay={index * 100}
             />

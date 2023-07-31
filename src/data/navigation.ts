@@ -4,8 +4,8 @@ export const TOP_NAV_LINKS = [
     link: '/',
   },
   {
-    text: 'Gigs',
-    link: '/gigs',
+    text: 'Services',
+    link: '/services',
   },
   {
     text: 'Blog',

@@ -5,9 +5,9 @@ import type {
   TouchEvent,
   UIEvent,
 } from 'react';
-import type { EducationData } from '../../types';
-import Portal from '../Portal/Portal';
-import Modal from '../Modal/Modal';
+import type { EducationData } from '../../../types';
+import Portal from '../../Common/Portal/Portal';
+import Modal from '../../Common/Modal/Modal';
 import TextFile from '../TextFile/TextFile';
 
 interface Props {

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { MouseEvent } from 'react';
 import File from '../File/File';
-import type { EducationData } from '../../types';
+import type { EducationData } from '../../../types';
 
 interface Props {
   closeFunction: () => void;

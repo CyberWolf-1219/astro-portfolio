@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import type { MouseEvent, TouchEvent } from 'react';
-import type { EducationData } from '../../types';
-import Portal from '../Portal/Portal';
-import Modal from '../Modal/Modal';
+import type { EducationData } from '../../../types';
+import Portal from '../../Common/Portal/Portal';
+import Modal from '../../Common/Modal/Modal';
 import Window from '../Window/Window';
 
 interface Props {

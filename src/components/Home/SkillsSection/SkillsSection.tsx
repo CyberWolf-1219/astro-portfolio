@@ -1,5 +1,5 @@
 import React from 'react';
-import { USER_SKILLS } from '../../data/skills';
+import { USER_SKILLS } from '../../../data/skills';
 
 function SkillsSection() {
   return (

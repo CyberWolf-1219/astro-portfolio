@@ -1,5 +1,5 @@
 import React from 'react';
-import { EDUCAION_MILESTONES } from '../../data/education';
+import { EDUCAION_MILESTONES } from '../../../data/education';
 import FolderIcon from '../FolderIcon/FolderIcon';
 
 function EducationSection() {

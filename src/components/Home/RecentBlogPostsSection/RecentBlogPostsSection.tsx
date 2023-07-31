@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogPostSnippetCard from '../BlogPostSnippetCard/BlogPostSnippetCard';
+import BlogPostSnippetCard from '../../Blog/BlogPostSnippetCard/BlogPostSnippetCard';
 
 function RecentBlogPostsSection() {
   return (

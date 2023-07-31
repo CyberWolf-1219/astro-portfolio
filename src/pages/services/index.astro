@@ -1,39 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ServicesNavigation from '../../components/ServicesNavigation/ServicesNavigation';
-import HeroSection from '../../components/Services/HeroSection/HeroSection';
-import ServiceCategorySection from '../../components/Services/ServiceCategorySection/ServiceCategorySection';
-import { SERVICES } from '../../data/service';
-const SECTION_LINKS = SERVICES.map((service) => {
-  return {
-    sectionName: service.category,
-    sectionId: service.category.toLowerCase().replaceAll(' ', '_'),
-  };
-});
+import ServicesComponent from '../../components/Services/ServicesComponent/ServicesComponent';
 ---
 
 <Layout title={'Lahiru A. Rajakaruna | Services'}>
-  <div class='w-full h-fit flex flex-row items-start justify-start'>
-    <!-- NAVIGATION -->
-    <ServicesNavigation sections={SECTION_LINKS} />
-    <!-- NAVIGATION -->
-    <main class='w-full h-fit overflow-hidden'>
-      <!-- HERO SECTION -->
-      <HeroSection />
-      <!-- OTHER SUB SECTIONS -->
-      {
-        SERVICES.map((serviceCategory) => {
-          return (
-            <ServiceCategorySection
-              sectionId={serviceCategory.category
-                .toLowerCase()
-                .replaceAll(' ', '_')}
-              sectionHeading={serviceCategory.category.toUpperCase()}
-              services={serviceCategory.services}
-            />
-          );
-        })
-      }
-    </main>
-  </div>
+  <ServicesComponent client:only={true} />
 </Layout>

@@ -32,14 +32,15 @@ export type BlogPostSection = {
 };
 
 export type Service = {
-  title: string;
-  image: {
-    link: string;
-    caption: string;
+  serviceTitle: string;
+  serviceImage: {
+    imageLink: string;
+    imageCaption: string;
   };
 };
 
 export type ServiceCategory = {
-  category: string;
-  services: Service[];
+  categoryID: string;
+  categoryName: string;
+  categoryServices: Service[];
 };

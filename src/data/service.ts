@@ -2,75 +2,80 @@ import type { ServiceCategory } from '../types';
 
 export const SERVICES: ServiceCategory[] = [
   {
-    category: 'HTML & CSS',
-    services: [
+    categoryID: 'html_css',
+    categoryName: 'HTML & CSS',
+    categoryServices: [
       {
-        title: 'HTML DEBUGGING',
-        image: { link: '', caption: 'html debugging service' },
+        serviceTitle: 'HTML DEBUGGING',
+        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
       },
       {
-        title: 'CSS DEBUGGING',
-        image: { link: '', caption: 'css debugging service' },
-      },
-    ],
-  },
-  {
-    category: 'CUSTOM WEBSITE DEVELOPMENT',
-    services: [
-      {
-        title: 'LANDING PAGES',
-        image: { link: '', caption: 'html debugging service' },
-      },
-      {
-        title: 'PORTFOLIO SITES',
-        image: { link: '', caption: 'css debugging service' },
-      },
-      {
-        title: 'BLOGGING PLATFORMS',
-        image: { link: '', caption: 'css debugging service' },
-      },
-      {
-        title: 'SIMPLE SOCIAL MEDIA PLATFORMS',
-        image: { link: '', caption: 'css debugging service' },
-      },
-      {
-        title: 'BUSINESS WEBSITES',
-        image: { link: '', caption: 'css debugging service' },
-      },
-      {
-        title: 'SINGLE PRODUCT E-COMMERCE PLATFORMS',
-        image: { link: '', caption: 'css debugging service' },
-      },
-      {
-        title: 'MULTI PRODUCT E-COMMERCE PLATFORMS',
-        image: { link: '', caption: 'css debugging service' },
+        serviceTitle: 'CSS DEBUGGING',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
       },
     ],
   },
   {
-    category: 'WORDPRESS DEVELOPMENT',
-    services: [
+    categoryID: 'custom_sites',
+    categoryName: 'CUSTOM WEBSITE DEVELOPMENT',
+    categoryServices: [
       {
-        title: 'THEMES',
-        image: { link: '', caption: 'html debugging service' },
+        serviceTitle: 'LANDING PAGES',
+        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+      },
+      {
+        serviceTitle: 'PORTFOLIO SITES',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+      },
+      {
+        serviceTitle: 'BLOGGING PLATFORMS',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+      },
+      {
+        serviceTitle: 'SIMPLE SOCIAL MEDIA PLATFORMS',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+      },
+      {
+        serviceTitle: 'BUSINESS WEBSITES',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+      },
+      {
+        serviceTitle: 'SINGLE PRODUCT E-COMMERCE PLATFORMS',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+      },
+      {
+        serviceTitle: 'MULTI PRODUCT E-COMMERCE PLATFORMS',
+        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
       },
     ],
   },
   {
-    category: 'WEBFLOW DEVELOPMENT',
-    services: [
+    categoryID: 'wordpress',
+    categoryName: 'WORDPRESS DEVELOPMENT',
+    categoryServices: [
       {
-        title: 'THEMES',
-        image: { link: '', caption: 'html debugging service' },
+        serviceTitle: 'THEMES',
+        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
       },
     ],
   },
   {
-    category: 'SHOPIFY DEVELOPMENT',
-    services: [
+    categoryID: 'webflow',
+    categoryName: 'WEBFLOW DEVELOPMENT',
+    categoryServices: [
       {
-        title: 'THEMES',
-        image: { link: '', caption: 'html debugging service' },
+        serviceTitle: 'THEMES',
+        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+      },
+    ],
+  },
+  {
+    categoryID: 'shopify',
+    categoryName: 'SHOPIFY DEVELOPMENT',
+    categoryServices: [
+      {
+        serviceTitle: 'THEMES',
+        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
       },
     ],
   },

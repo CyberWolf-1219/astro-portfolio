@@ -20,9 +20,7 @@ function ServiceCategoryViewer({ selectedCategoryID }: Props) {
           return (
             <ServiceCategorySection
               key={`category_${Math.random()}`}
-              sectionId={serviceCategory.categoryID}
-              sectionHeading={serviceCategory.categoryName}
-              services={serviceCategory.categoryServices}
+              serviceCategory={serviceCategory}
             />
           );
         }

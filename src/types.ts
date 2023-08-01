@@ -42,5 +42,6 @@ export type Service = {
 export type ServiceCategory = {
   categoryID: string;
   categoryName: string;
+  categoryImage: { imageLink: string; imageCaption: string };
   categoryServices: Service[];
 };

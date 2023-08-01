@@ -4,20 +4,44 @@ export const SERVICES: ServiceCategory[] = [
   {
     categoryID: 'html_css',
     categoryName: 'HTML & CSS',
+    categoryImage: {
+      imageLink: '/html_css.svg',
+      imageCaption: 'html and css services',
+    },
     categoryServices: [
       {
-        serviceTitle: 'HTML DEBUGGING',
-        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+        serviceTitle: 'HTML & CSS DEBUGGING',
+        serviceImage: {
+          imageLink: '/html_css.svg',
+          imageCaption: 'html and css debugging service',
+        },
       },
+    ],
+  },
+  {
+    categoryID: 'js_ts',
+    categoryName: 'Javascript | Typescript',
+    categoryImage: {
+      imageLink: '/javascript.svg',
+      imageCaption: 'javascript and typescript services',
+    },
+    categoryServices: [
       {
-        serviceTitle: 'CSS DEBUGGING',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceTitle: 'JS|TS DEBUGGING',
+        serviceImage: {
+          imageLink: '/javascript.svg',
+          imageCaption: 'javascript and typescript debugging service',
+        },
       },
     ],
   },
   {
     categoryID: 'custom_sites',
     categoryName: 'CUSTOM WEBSITE DEVELOPMENT',
+    categoryImage: {
+      imageLink: '/website.svg',
+      imageCaption: 'custom websites and appliction development services',
+    },
     categoryServices: [
       {
         serviceTitle: 'LANDING PAGES',
@@ -52,6 +76,10 @@ export const SERVICES: ServiceCategory[] = [
   {
     categoryID: 'wordpress',
     categoryName: 'WORDPRESS DEVELOPMENT',
+    categoryImage: {
+      imageLink: '/wordpress.svg',
+      imageCaption: 'wordpress development services',
+    },
     categoryServices: [
       {
         serviceTitle: 'THEMES',
@@ -62,6 +90,10 @@ export const SERVICES: ServiceCategory[] = [
   {
     categoryID: 'webflow',
     categoryName: 'WEBFLOW DEVELOPMENT',
+    categoryImage: {
+      imageLink: '/webflow.svg',
+      imageCaption: 'webflow development services',
+    },
     categoryServices: [
       {
         serviceTitle: 'THEMES',
@@ -71,6 +103,10 @@ export const SERVICES: ServiceCategory[] = [
   },
   {
     categoryID: 'shopify',
+    categoryImage: {
+      imageLink: '/shopify.svg',
+      imageCaption: 'shopify development services',
+    },
     categoryName: 'SHOPIFY DEVELOPMENT',
     categoryServices: [
       {

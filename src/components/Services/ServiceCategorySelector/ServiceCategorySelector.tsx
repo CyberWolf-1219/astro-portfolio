@@ -1,51 +1,85 @@
-import React, { MouseEvent, useEffect, useRef } from 'react';
+import React, {
+  Dispatch,
+  MouseEvent,
+  SetStateAction,
+  memo,
+  useEffect,
+  useRef,
+} from 'react';
+
 import type { ServiceCategory } from '../../../types';
 import SelectorButton from '../SelectorButton/SelectorButton';
 import useIntersectionObserver from '../../../hooks/useIntersectionObserver';
 
 interface Props {
   serviceCategories: ServiceCategory[];
+  setSelectedCategoryID: Dispatch<SetStateAction<string>>;
 }
 
-function ServiceCategorySelector({ serviceCategories }: Props) {
+function ServiceCategorySelector({
+  serviceCategories,
+  setSelectedCategoryID,
+}: Props) {
   const rootElement = useRef(null);
   const categorySelectorButtons = useRef<HTMLButtonElement[]>([]);
 
-  const observe = useIntersectionObserver(intersectionObserverCallback, {
-    root: rootElement.current,
-    threshold: [0.25, 0.5, 0.75, 1.0],
-  });
+  // * INTERSECTION OBSERVER SETUP =============================================
+  const [observe, unobserve] = useIntersectionObserver(
+    intersectionObserverCallback,
+    {
+      root: rootElement.current,
+      threshold: [0.75],
+    }
+  );
 
   useEffect(() => {
     categorySelectorButtons.current!.forEach((button) => {
       observe(button);
     });
-  }, []);
 
-  function buttonClick(e: MouseEvent) {
-    console.log(e);
-  }
+    return () => {
+      categorySelectorButtons.current!.forEach((button) => {
+        unobserve(button);
+      });
+    };
+  }, []);
 
   function intersectionObserverCallback(
     entries: IntersectionObserverEntry[],
     observer: IntersectionObserver
-  ) {}
+  ) {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio >= 0.75) {
+        (entry.target as HTMLButtonElement).click();
+      }
+    });
+  }
+  // * =========================================================================
+
+  function buttonClick(e: MouseEvent<HTMLButtonElement>) {
+    if (setSelectedCategoryID) {
+      setSelectedCategoryID(e.currentTarget.value);
+    } else {
+      console.error('NO REACT DISPATCHER FOUND...');
+    }
+  }
 
   return (
     <aside
       ref={rootElement}
-      className='fixed z-[30] bottom-[0] right-[0] w-full h-fit py-[10px] flex flex-row items-center justify-start font-bold text-lg overflow-x-auto snap-x snap-mandatory bg-pallet-primary-light'>
+      className='fixed z-[30] bottom-[0] right-[0] w-full h-[8vh] py-[5px] flex flex-row items-center justify-start font-bold text-lg overflow-x-auto snap-x snap-mandatory bg-pallet-primary-light'>
       {serviceCategories.map((serviceCategory) => {
         return (
           <SelectorButton
+            key={`category_selector_${Math.random()}`}
             buttonText={serviceCategory.categoryName}
             clickHandler={buttonClick}
             buttonRefHolder={categorySelectorButtons.current}
+            value={serviceCategory.categoryID}
           />
         );
       })}
     </aside>
   );
 }
-
-export default ServiceCategorySelector;
+export default memo(ServiceCategorySelector);

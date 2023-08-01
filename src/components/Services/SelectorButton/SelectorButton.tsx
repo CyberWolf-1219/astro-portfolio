@@ -4,20 +4,29 @@ interface Props {
   buttonText: string;
   clickHandler: (e: MouseEvent<HTMLButtonElement>) => void;
   buttonRefHolder: HTMLButtonElement[];
+  value: string;
 }
 
-function SelectorButton({ buttonText, clickHandler, buttonRefHolder }: Props) {
+function SelectorButton({
+  buttonText,
+  clickHandler,
+  buttonRefHolder,
+  value,
+}: Props) {
   const button = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    buttonRefHolder.push(button.current!);
-  });
+    if (button.current) {
+      buttonRefHolder.push(button.current);
+    }
+  }, [button.current]);
 
   return (
     <button
       ref={button}
       onClick={clickHandler}
-      className='min-w-[100vw] h-fit text-center snap-center whitespace-nowrap'>
+      value={value}
+      className='min-w-[100vw] w-full h-full text-center snap-center whitespace-nowrap transition-transform pointer-events-none'>
       {buttonText.toUpperCase()}
     </button>
   );

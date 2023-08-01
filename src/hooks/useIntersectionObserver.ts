@@ -12,7 +12,11 @@ function useIntersectionObserver(
     INTERSECTION_OBSERVER.observe(element);
   }
 
-  return observe;
+  function unobserve(element: HTMLElement) {
+    INTERSECTION_OBSERVER.unobserve(element);
+  }
+
+  return [observe, unobserve] as const;
 }
 
 export default useIntersectionObserver;

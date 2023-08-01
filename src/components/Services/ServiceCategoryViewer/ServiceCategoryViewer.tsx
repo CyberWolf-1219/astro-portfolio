@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {
+  Dispatch,
+  MutableRefObject,
+  SetStateAction,
+  useEffect,
+  useState,
+} from 'react';
 import { SERVICES } from '../../../data/service';
 import ServiceCategorySection from '../ServiceCategorySection/ServiceCategorySection';
-import HeroSection from '../HeroSection/HeroSection';
 
 interface Props {
-  categoryIDToRender: string | undefined;
+  selectedCategoryID: string;
 }
 
-function ServiceCategoryViewer({ categoryIDToRender }: Props) {
+function ServiceCategoryViewer({ selectedCategoryID }: Props) {
   return (
-    <>
+    <main className='w-full h-fit overflow-hidden'>
       {SERVICES.map((serviceCategory, index) => {
-        if (serviceCategory.categoryID == categoryIDToRender) {
+        if (serviceCategory.categoryID == selectedCategoryID) {
           return (
             <ServiceCategorySection
+              key={`category_${Math.random()}`}
               sectionId={serviceCategory.categoryID}
               sectionHeading={serviceCategory.categoryName}
               services={serviceCategory.categoryServices}
@@ -21,7 +27,7 @@ function ServiceCategoryViewer({ categoryIDToRender }: Props) {
           );
         }
       })}
-    </>
+    </main>
   );
 }
 

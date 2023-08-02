@@ -45,3 +45,23 @@ export type ServiceCategory = {
   categoryImage: { imageLink: string; imageCaption: string };
   categoryServices: Service[];
 };
+
+export type FeaturedProject = {
+  projectTitle: string;
+  projectImage: {
+    imageLink: string;
+    imageCaption: string;
+  };
+  projectLink: string;
+};
+
+export type RecentBlogPost = {
+  postID: string;
+  postTitle: string;
+  postImage: {
+    imageLink: string;
+    imageCaption: string;
+  };
+  postSnippet: string;
+  postLink: string;
+};

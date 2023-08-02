@@ -2,53 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import type { FocusEvent, KeyboardEvent } from 'react';
 import { sleep } from './helpers';
 
-const HELP_TEXT =
-  'instructions:\n1). Set email address\n\tset-email=[email]\n2). Set subject\n\tset-subject=[subject]\n3).Set message\n\tset-msg=[msg]\n4).send email\n\tsend\n5). Help\n\thelp\nretromailclient>';
-
-const LOADING_TEXT = [
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-  '[|] Loading Mail Client...',
-  '[/] Loading Mail Client...',
-  '[-] Loading Mail Client...',
-  '[\\] Loading Mail Client...',
-];
-
-const TERMINAL_DEFAULT_PROMPT = 'retromailclient>';
+import {
+  LOADING_TEXT,
+  HELP_TEXT,
+  TERMINAL_DEFAULT_PROMPT,
+} from './static_data';
 
 function ContactMeSection() {
   const textarea = useRef<HTMLTextAreaElement>(null);
@@ -98,9 +56,7 @@ function ContactMeSection() {
             e.currentTarget.value = `[i] MESSAGE SET TO:${value}\n${TERMINAL_DEFAULT_PROMPT}`;
           } else if (property == 'send') {
             if (email.current && subject.current && msg.current) {
-              alert(
-                `EMAIL: ${email.current}\nSUBJECT: ${subject.current}\nMSG:${msg.current}`
-              );
+              window.location.href = `mailto:bl4ckm0nk3yb4n4n4@gmail.com?subject=${subject.current}&body=${msg.current}`;
             } else {
               e.currentTarget.value = `[i] REQUIRED PROPERTIES ARE MISSING\n${TERMINAL_DEFAULT_PROMPT}`;
             }
@@ -125,7 +81,9 @@ function ContactMeSection() {
     <section>
       <div>
         <h2>@Contact Me Section&gt;_</h2>
-        <form noValidate={false}>
+        <form
+          noValidate={false}
+          className={'w-full max-w-[800px] mx-auto'}>
           <div
             className={
               'w-full h-fit px-[5px] flex flex-row items-center justify-between bg-pallet-accent/70 border-[2px] border-pallet-accent'

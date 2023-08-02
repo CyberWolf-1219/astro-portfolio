@@ -42,7 +42,7 @@ function File({ fileName, fileContent }: Props) {
       <div
         onDoubleClick={openFile<MouseEvent>}
         onTouchStart={openFile<TouchEvent>}
-        className={'aspect-[1/1.3] w-[50px] max-w-[50px] h-auto'}>
+        className={'aspect-[1/1.3] w-[50px] max-w-[50px] h-auto select-none'}>
         <div
           className={'w-full h-full  bg-white text-pallet-primary text-center'}>
           txt

@@ -39,7 +39,7 @@ function FolderIcon({ folderName, folderContent }: Props) {
       <div
         onDoubleClick={openWindow}
         onTouchStart={openWindow}
-        className={'aspect-[4/3] w-[80px] h-auto'}>
+        className={'aspect-[4/3] w-[80px] h-auto select-none'}>
         <div className={'w-[50%] h-[8px] bg-pallet-accent'}></div>
         <div className={'w-full h-full bg-pallet-accent'}></div>
         <p className={'w-full h-fit'}>{folderName}</p>

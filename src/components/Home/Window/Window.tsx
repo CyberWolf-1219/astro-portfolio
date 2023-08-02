@@ -16,7 +16,7 @@ function Window({ closeFunction, folderName, files }: Props) {
   }
 
   return (
-    <div className={'w-full h-full'}>
+    <div className={'w-full max-w-[800px] h-full mx-auto'}>
       <div
         className={
           'w-full h-fit pl-[10px] flex flex-row items-center justify-between bg-pallet-accent/50 border-[2px] border-pallet-accent border-b-transparent'

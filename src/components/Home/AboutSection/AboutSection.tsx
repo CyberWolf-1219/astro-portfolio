@@ -13,10 +13,10 @@ function AboutSection() {
             src=''
             alt=''
             className={
-              'shrink-0 aspect-[4/5] md:aspect-[1/1] w-full max-w-[400px] h-auto md:mr-[10px] bg-pallet-accent'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left lg:float-none bg-pallet-accent'
             }
           />
-          <p className={'text-justify md:columns-2 lg:columns-3'}>
+          <p className={'text-justify md:columns-0 lg:columns-2 xl:columns-1'}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore
             aliquam omnis quae illo sed, obcaecati quos autem pariatur suscipit
             deleniti assumenda eligendi unde incidunt. Adipisci commodi

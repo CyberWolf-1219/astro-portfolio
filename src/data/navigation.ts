@@ -1,14 +1,17 @@
 export const TOP_NAV_LINKS = [
   {
     text: 'Home',
+    icon: '/ui_icons/home.png',
     link: '/',
   },
   {
     text: 'Services',
+    icon: '/ui_icons/services.png',
     link: '/services',
   },
   {
     text: 'Blog',
+    icon: '/ui_icons/blog.png',
     link: '/blog',
   },
 ];

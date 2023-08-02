@@ -12,7 +12,7 @@ export const SERVICES: ServiceCategory[] = [
       {
         serviceTitle: 'HTML & CSS DEBUGGING',
         serviceImage: {
-          imageLink: '/html_css.svg',
+          imageLink: '/service_icons/html.png',
           imageCaption: 'html and css debugging service',
         },
       },
@@ -29,7 +29,7 @@ export const SERVICES: ServiceCategory[] = [
       {
         serviceTitle: 'JS|TS DEBUGGING',
         serviceImage: {
-          imageLink: '/javascript.svg',
+          imageLink: '/service_icons/code.png',
           imageCaption: 'javascript and typescript debugging service',
         },
       },
@@ -45,31 +45,52 @@ export const SERVICES: ServiceCategory[] = [
     categoryServices: [
       {
         serviceTitle: 'LANDING PAGES',
-        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/landing_page.png',
+          imageCaption: 'html debugging service',
+        },
       },
       {
         serviceTitle: 'PORTFOLIO SITES',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/portfolio.png',
+          imageCaption: 'css debugging service',
+        },
       },
       {
         serviceTitle: 'BLOGGING PLATFORMS',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/blog_platform.png',
+          imageCaption: 'css debugging service',
+        },
       },
       {
         serviceTitle: 'SIMPLE SOCIAL MEDIA PLATFORMS',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/social_media_platform.png',
+          imageCaption: 'css debugging service',
+        },
       },
       {
         serviceTitle: 'BUSINESS WEBSITES',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/business_website.png',
+          imageCaption: 'css debugging service',
+        },
       },
       {
         serviceTitle: 'SINGLE PRODUCT E-COMMERCE PLATFORMS',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/single_product_shop.png',
+          imageCaption: 'css debugging service',
+        },
       },
       {
         serviceTitle: 'MULTI PRODUCT E-COMMERCE PLATFORMS',
-        serviceImage: { imageLink: '', imageCaption: 'css debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/online_shop.png',
+          imageCaption: 'css debugging service',
+        },
       },
     ],
   },
@@ -77,13 +98,16 @@ export const SERVICES: ServiceCategory[] = [
     categoryID: 'wordpress',
     categoryName: 'WORDPRESS DEVELOPMENT',
     categoryImage: {
-      imageLink: '/wordpress.svg',
+      imageLink: '/wordpress.png',
       imageCaption: 'wordpress development services',
     },
     categoryServices: [
       {
         serviceTitle: 'THEMES',
-        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/wordpress.png',
+          imageCaption: 'html debugging service',
+        },
       },
     ],
   },
@@ -97,21 +121,27 @@ export const SERVICES: ServiceCategory[] = [
     categoryServices: [
       {
         serviceTitle: 'THEMES',
-        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/webflow.png',
+          imageCaption: 'html debugging service',
+        },
       },
     ],
   },
   {
     categoryID: 'shopify',
     categoryImage: {
-      imageLink: '/shopify.svg',
+      imageLink: '/shopify.png',
       imageCaption: 'shopify development services',
     },
     categoryName: 'SHOPIFY DEVELOPMENT',
     categoryServices: [
       {
         serviceTitle: 'THEMES',
-        serviceImage: { imageLink: '', imageCaption: 'html debugging service' },
+        serviceImage: {
+          imageLink: '/service_icons/shopify.png',
+          imageCaption: 'html debugging service',
+        },
       },
     ],
   },

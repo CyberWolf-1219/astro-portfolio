@@ -15,12 +15,28 @@ function Navigation() {
         <Logo />
         <ul
           className={
-            'w-fit h-fit flex flex-row items-center justify-between gap-[10px]'
+            'w-fit h-fit flex flex-row items-center justify-between gap-[2rem]'
           }>
-          {TOP_NAV_LINKS.map(({ text, link }, index) => {
+          {TOP_NAV_LINKS.map(({ text, icon, link }, index) => {
             return (
-              <li key={`nav_link_${index}`}>
-                <a href={link}>{text}</a>
+              <li
+                key={`nav_link_${index}`}
+                className={
+                  'w-fit h-fit px-[0.5em] py-[0.3em] hover:bg-pallet-accent  transition-colors duration-[300ms] ease-out group/link'
+                }>
+                <a
+                  href={link}
+                  className={
+                    'flex flex-row items-center justify-start gap-[0.25em]'
+                  }>
+                  <img
+                    src={icon}
+                    className={
+                      'aspect-[1/1] w-[1em] h-auto group-hover/link:brightness-[5] transition-all ease-out duration-[300ms]'
+                    }
+                  />
+                  {text}
+                </a>
               </li>
             );
           })}

@@ -1,0 +1,51 @@
+.card {
+    opacity: 0;
+
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+
+    animation: zoom_in 500ms ease-out 0ms 1 normal forwards;
+    -webkit-animation: zoom_in 500ms ease-out 0ms 1 normal forwards;
+}
+
+@keyframes zoom_in {
+    0% {
+        opacity: 0;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+
+    }
+
+    40% {
+        opacity: 0.8;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+        -moz-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+        -o-transform: scale(1.08);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+        -moz-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        -o-transform: scale(1.0);
+    }
+}

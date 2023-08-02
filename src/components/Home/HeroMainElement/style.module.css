@@ -1,0 +1,19 @@
+.element {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 5px;
+    stroke-linecap: butt;
+    stroke-dasharray: 80% 20%;
+    animation: path-animation 5s linear 0ms infinite normal forwards;
+    -webkit-animation: path-animation 5s linear 0ms infinite normal forwards;
+}
+
+@keyframes path-animation {
+    0% {
+        stroke-dashoffset: 0%;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}

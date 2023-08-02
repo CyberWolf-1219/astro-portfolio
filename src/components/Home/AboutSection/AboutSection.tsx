@@ -10,10 +10,10 @@ function AboutSection() {
             'w-full h-fit flex flex-col lg:flex-row items-start justify-start'
           }>
           <img
-            src=''
+            src='/profile_image.svg'
             alt=''
             className={
-              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left lg:float-none bg-pallet-accent'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left lg:float-none bg-pallet-accent object-cover'
             }
           />
           <p className={'text-justify md:columns-0 lg:columns-2 xl:columns-1'}>

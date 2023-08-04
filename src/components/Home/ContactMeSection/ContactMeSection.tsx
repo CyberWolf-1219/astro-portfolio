@@ -83,7 +83,7 @@ function ContactMeSection() {
         <h2>@Contact Me Section&gt;_</h2>
         <form
           noValidate={false}
-          className={'w-full max-w-[800px] mx-auto'}>
+          className={'w-full mx-auto'}>
           <div
             className={
               'w-full h-fit px-[5px] flex flex-row items-center justify-between bg-pallet-accent/70 border-[2px] border-pallet-accent'
@@ -98,7 +98,7 @@ function ContactMeSection() {
             ref={textarea}
             id='email_input'
             className={
-              'aspect-[1/1] md:aspect-[16/9] w-full h-auto p-[10px] bg-pallet-accent/70 text-pallet-primary font-semibold'
+              'aspect-[1/1] md:aspect-[16/9] w-full h-auto p-[10px] bg-pallet-accent/70 text-pallet-primary font-semibold md:!text-2xl'
             }></textarea>
         </form>
       </div>

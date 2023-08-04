@@ -2,21 +2,21 @@ import React from 'react';
 
 function AboutSection() {
   return (
-    <section>
-      <div className={'w-full h-fit'}>
+    <section className={'bg-pallet-primary-light'}>
+      <div className={'w-full h-fit '}>
         <h2>@About Section&gt;_</h2>
         <div
           className={
-            'w-full h-fit flex flex-col lg:flex-row items-start justify-start'
+            'w-full h-fit flex flex-col md:block items-start justify-start'
           }>
           <img
             src='/profile_image.svg'
             alt=''
             className={
-              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left lg:float-none bg-pallet-accent object-cover'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
             }
           />
-          <p className={'text-justify md:columns-0 lg:columns-2 xl:columns-1'}>
+          <p className={'text-justify md:columns-0 xl:columns-1'}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore
             aliquam omnis quae illo sed, obcaecati quos autem pariatur suscipit
             deleniti assumenda eligendi unde incidunt. Adipisci commodi

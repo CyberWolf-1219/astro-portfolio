@@ -14,7 +14,7 @@ interface Props {
 
 function ServiceCategoryViewer({ selectedCategoryID }: Props) {
   return (
-    <main className='w-full h-fit overflow-hidden'>
+    <main className='w-full h-fit mb-[12%] overflow-hidden'>
       {SERVICES.map((serviceCategory, index) => {
         if (serviceCategory.categoryID == selectedCategoryID) {
           return (

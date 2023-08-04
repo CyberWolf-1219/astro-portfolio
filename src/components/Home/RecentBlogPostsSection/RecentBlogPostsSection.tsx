@@ -7,12 +7,12 @@ function RecentBlogPostsSection() {
     <section>
       <div>
         <h2>@Recent Blog Posts Section&gt;_</h2>
-        <ul
-          className={
-            'w-full h-fit flex flex-row items-center justify-start gap-[10px] md:grid grid-cols-2 lg:grid-cols-3 overflow-x-auto snap-x'
-          }>
-          {RECENT_BLOG_POSTS.length > 0 ? (
-            RECENT_BLOG_POSTS.map((post) => {
+        {RECENT_BLOG_POSTS.length > 0 ? (
+          <ul
+            className={
+              'w-full h-fit flex flex-row items-center justify-start gap-[10px] md:grid grid-cols-2 lg:grid-cols-3 overflow-x-auto snap-x'
+            }>
+            {RECENT_BLOG_POSTS.map((post) => {
               return (
                 <li
                   key={`recent_blog_post_${Math.random()}`}
@@ -22,18 +22,18 @@ function RecentBlogPostsSection() {
                   <BlogPostSnippetCard />
                 </li>
               );
-            })
-          ) : (
-            <code
-              className={
-                'w-full h-fit p-[2rem] text-xl text-pallet-accent border-[5px] border-pallet-accent'
-              }>
-              <span>&#58;&#40;&nbsp;ERROR</span>
-              <br />
-              <span>&lt;NO BLOG POSTS HAS BEEN UPLOADED YET/&gt;</span>
-            </code>
-          )}
-        </ul>
+            })}
+          </ul>
+        ) : (
+          <p
+            className={
+              'w-full h-fit my-[25px] p-[1.5rem] text-xl text-pallet-accent border-[5px] border-pallet-accent'
+            }>
+            <span>&#58;&#40;&nbsp;ERROR</span>
+            <br />
+            <span>&lt;NO BLOG POSTS HAS BEEN UPLOADED YET/&gt;</span>
+          </p>
+        )}
       </div>
     </section>
   );

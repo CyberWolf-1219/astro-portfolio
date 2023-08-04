@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import BlogSearchResultPanel from '../BlogSearchResultPanel/BlogSearchResultPanel';
 import BlogSearchEngine from '../BlogSearchEngine/BlogSearchEngine';
-import { DUMMY_POSTS } from '../../data/blog';
-import type { BlogPostSnippet } from '../../types';
+import type { BlogPostSnippet } from '../../../types';
+import { DUMMY_POSTS } from '../../../data/blog';
 
 function BlogSearchPanel() {
   const [filteredBlogPosts, setFilteredBlogPosts] =

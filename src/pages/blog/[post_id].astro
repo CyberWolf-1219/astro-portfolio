@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import BlogPostLayout from '../../components/BlogPostLayout/BlogPostLayout';
 import { BLOG_POSTS } from '../../data/blogposts';
+import BlogPostLayout from '../../components/Blog/BlogPostLayout/BlogPostLayout';
 
 export function getStaticPaths() {
   const PATHS = BLOG_POSTS.map((post, index) => {

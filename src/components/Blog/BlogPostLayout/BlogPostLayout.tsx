@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import BlogPostHeroSection from '../BlogPostHeroSection/BlogPostHeroSection';
 import BlogPostSubSection from '../BlogPostSubSection/BlogPostSubSection';
-import type { BlogPost, BlogPostSection } from '../../types';
 import axios from 'axios';
-import { BLOG_POSTS } from '../../data/blogposts';
+import { BLOG_POSTS } from '../../../data/blogposts';
+import type { BlogPost } from '../../../types';
 
 interface Props {
   postID: number;

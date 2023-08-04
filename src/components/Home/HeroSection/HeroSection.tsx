@@ -10,7 +10,7 @@ function HeroSection() {
         className={
           'relative z-[0] md:aspect-[16/9] w-full h-full flex flex-col items-center justify-center'
         }>
-        <div className={'aspect-[1/1] w-[80%] h-auto'}>
+        <div className={'aspect-[1/1] w-[80%] max-w-[500px] h-auto'}>
           <HeroMainElement />
         </div>
         <div className={'relative z-[2]'}>

@@ -7,7 +7,7 @@ function ServicesComponent() {
   const [selectedCategoryID, setSelectedCategoryID] = useState('overview');
 
   return (
-    <div className='w-full h-fit flex flex-row items-start justify-start'>
+    <div className='md:relative md:aspect-[16/9] w-full max-w-[1440px] h-fit md:h-auto mx-auto flex flex-row items-start justify-start overflow-hidden'>
       <ServiceCategorySelector
         serviceCategories={SERVICES}
         setSelectedCategoryID={setSelectedCategoryID}

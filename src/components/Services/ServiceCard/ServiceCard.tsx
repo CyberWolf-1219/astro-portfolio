@@ -11,12 +11,12 @@ interface Props {
 function ServiceCard({ service }: Props) {
   return (
     <div
-      className={`${css.card} relative shrink-0 aspect-[4/5] w-full h-auto p-[15px] bg-pallet-primary-light shadow-[0px_0px_10px_2px] shadow-transparent border-[1px] border-pallet-accent hover:shadow-pallet-accent/30 duration-[300ms] overflow-hidden`}>
+      className={`${css.card} relative shrink-0 aspect-[4/5] w-full md:w-[200px] xl:w-[300px] h-auto p-[15px] bg-pallet-primary-light shadow-[0px_0px_10px_2px] shadow-transparent border-[1px] border-pallet-accent hover:shadow-pallet-accent/30 duration-[300ms] overflow-hidden`}>
       <table
         className={
           'w-full h-full text-center flex flex-col items-center justify-between gap-[10px]'
         }>
-        <thead className={'text-xl'}>
+        <thead className={'text-xl md:!text-sm xl:!text-2xl'}>
           <tr>
             <th>{service.serviceTitle}</th>
           </tr>
@@ -27,7 +27,9 @@ function ServiceCard({ service }: Props) {
               <img
                 src={service.serviceImage.imageLink}
                 alt={service.serviceImage.imageCaption}
-                className={'aspect-[1/1] w-full max-w-[150px] h-auto mx-auto'}
+                className={
+                  'aspect-[1/1] w-full max-w-[150px] md:max-w-[50px] xl:max-w-[100px] h-auto mx-auto'
+                }
               />
             </td>
           </tr>

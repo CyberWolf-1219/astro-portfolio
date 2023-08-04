@@ -12,6 +12,12 @@
 
     animation: zoom_in 500ms ease-out 0ms 1 normal forwards;
     -webkit-animation: zoom_in 500ms ease-out 0ms 1 normal forwards;
+
+    background-image: url('/service_card_bg.svg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: difference;
 }
 
 @keyframes zoom_in {

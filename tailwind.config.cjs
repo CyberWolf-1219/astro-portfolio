@@ -7,9 +7,8 @@ module.exports = {
         pallet: {
           primary: '#272727',
           'primary-light': '#303030',
-          secondary: '#4f98ca',
+          secondary: '#EFFFFB',
           accent: '#50D890',
-          light: '#EFFFFB',
         },
       },
     },

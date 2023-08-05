@@ -11,12 +11,12 @@ function ServiceCategorySection({ serviceCategory }: Props) {
     <section
       id={serviceCategory.categoryID}
       className={
-        'md:w-full md:h-full md:p-[0rem] lg:pb-[20px] md:border-[2px] border-pallet-accent overflow-hidden'
+        'md:w-full md:h-full md:p-[0rem] md:border-[2px] lg:border-transparent border-pallet-seconday overflow-hidden'
       }>
       <div className={'relative w-full h-full overflow-hidden'}>
         <h2
           className={
-            'md:absolute top-[1%] md:m-[0] w-full text-center whitespace-break-spaces border-y-[2px] md:border-transparent '
+            'md:absolute z-[2] top-[1%] md:m-[0] w-full text-center whitespace-break-spaces border-y-[2px] md:border-transparent '
           }>
           {serviceCategory.categoryName}
         </h2>
@@ -24,12 +24,12 @@ function ServiceCategorySection({ serviceCategory }: Props) {
           src={serviceCategory.categoryImage.imageLink}
           alt={serviceCategory.categoryImage.imageCaption}
           className={
-            'md:absolute bottom-[0%] xl:bottom-[0%] left-[0%] xl:left-[-10%] aspect-[1/1] w-full h-auto md:w-[500px] xl:w-[800px] md:blur-[1.5px] md:object-bottom'
+            'md:absolute z-[1] top-[50%] md:left-[50%] left-[5%] md:translate-y-[-50%] md:translate-x-[-50%] aspect-[1/1] w-full md:max-w-[300px] lg:max-w-[500px] h-auto md:blur-[.5px]'
           }
         />
         <ul
           className={
-            'md:absolute bottom-[5%] right-[10%] w-[100%] md:w-[45%] md:pb-[10px] h-fit md:p-[25px] mt-[20px] flex flex-col md:flex-row items-center justify-start gap-[20px] snap-both snap-mandatory overflow-auto'
+            'md:absolute z-[3] bottom-[5%] left-[5%] lg:left-[25%] right-[5%] w-[100%] md:w-auto md:pb-[10px] h-fit md:p-[25px] mt-[50px] flex flex-col md:flex-row items-center justify-start gap-[10px] snap-both snap-mandatory overflow-auto'
           }>
           {serviceCategory.categoryServices.map((service) => {
             return (

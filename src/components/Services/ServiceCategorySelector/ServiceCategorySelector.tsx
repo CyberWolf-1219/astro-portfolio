@@ -67,7 +67,7 @@ function ServiceCategorySelector({
   return (
     <aside
       ref={rootElement}
-      className='fixed lg:absolute z-[30] bottom-[0] right-[0] w-full h-[8vh] md:h-fit py-[5px] flex flex-row items-center justify-start font-bold text-lg md:!text-md overflow-x-auto snap-x snap-mandatory bg-pallet-primary-light'>
+      className='flex-[1] sticky md:static z-[30] top-[0] bottom-[0] right-[0] w-full h-[8vh] md:h-full flex md:flex-col items-center justify-start md:justify-stretch md:border-l-[2px] md:border-t-[2px] border-pallet-secondary overflow-x-auto snap-x snap-mandatory bg-pallet-primary-light'>
       {serviceCategories.map((serviceCategory) => {
         return (
           <SelectorButton

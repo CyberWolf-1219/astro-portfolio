@@ -1,6 +1,9 @@
 export type EducationData = {
   course: string;
-  description: string;
+  description: {
+    title: string;
+    desc: string;
+  };
   link: string;
 };
 

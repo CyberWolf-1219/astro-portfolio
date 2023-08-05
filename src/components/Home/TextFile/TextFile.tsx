@@ -31,9 +31,11 @@ function TextFile({ closeAction, courseData }: Props) {
         }>
         <code>
           <h1 className={'!text-lg border-y-[2px] border-pallet-light'}>
-            {courseData.course}
+            {courseData.description.title}
           </h1>
-          <p className={'mb-[10px] text-justify'}>{courseData.description}</p>
+          <p className={'mb-[10px] text-justify'}>
+            {courseData.description.desc}
+          </p>
           <a
             href={courseData.link}
             className={'text-pallet-accent underline'}>

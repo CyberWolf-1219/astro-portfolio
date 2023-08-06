@@ -26,7 +26,7 @@ function SelectorButton({
       ref={button}
       onClick={clickHandler}
       value={value}
-      className='min-w-[100vw] w-full md:min-w-fit h-full text-center snap-center whitespace-nowrap md:whitespace-pre-wrap md:border-b-[2px] md:border-pallet-secondary transition-transform pointer-events-none md:pointer-events-auto'>
+      className='min-w-[100vw] w-full md:min-w-fit h-full text-center font-semibold snap-center whitespace-nowrap md:whitespace-pre-wrap md:border-b-[2px] md:border-pallet-secondary transition-all pointer-events-none md:pointer-events-auto md:hover:bg-pallet-accent'>
       {buttonText.toUpperCase()}
     </button>
   );

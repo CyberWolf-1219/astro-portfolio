@@ -31,12 +31,15 @@ function ServiceCategorySection({ serviceCategory }: Props) {
           className={
             'md:absolute z-[3] bottom-[5%] left-[5%] lg:left-[25%] right-[5%] w-[100%] md:w-auto md:pb-[10px] h-fit md:p-[25px] mt-[50px] flex flex-col md:flex-row items-center justify-start gap-[10px] snap-both snap-mandatory overflow-auto'
           }>
-          {serviceCategory.categoryServices.map((service) => {
+          {serviceCategory.categoryServices.map((service, index) => {
             return (
               <li
                 key={`service_${Math.random()}`}
                 className={'shrink-0 w-full md:w-fit h-fit snap-center'}>
-                <ServiceCard service={service} />
+                <ServiceCard
+                  service={service}
+                  cardIndex={index}
+                />
               </li>
             );
           })}

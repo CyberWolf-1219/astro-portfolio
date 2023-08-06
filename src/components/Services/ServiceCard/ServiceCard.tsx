@@ -6,12 +6,14 @@ import { CONTACTS } from '../../../data/contacts';
 
 interface Props {
   service: Service;
+  cardIndex: number;
 }
 
-function ServiceCard({ service }: Props) {
+function ServiceCard({ service, cardIndex }: Props) {
   return (
     <div
-      className={`${css.card} relative shrink-0 aspect-[4/5] w-full md:w-[150px] h-auto p-[15px] bg-pallet-primary-light shadow-[0px_0px_10px_2px] shadow-transparent border-[2px] border-pallet-secondary hover:shadow-pallet-accent/30 duration-[300ms] overflow-hidden`}>
+      className={`${css.card} relative shrink-0 aspect-[4/5] w-full md:w-[150px] lg:w-[200px] h-auto p-[15px] bg-pallet-primary-light shadow-[0px_0px_10px_2px] shadow-transparent border-[2px] border-pallet-secondary hover:shadow-pallet-accent/30 duration-[300ms] overflow-hidden`}
+      style={{ animationDelay: `${cardIndex * 150}ms` }}>
       <table
         className={
           'w-full h-full text-center flex flex-col items-center justify-between gap-[10px]'

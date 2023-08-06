@@ -33,17 +33,6 @@
 
     }
 
-    40% {
-        opacity: 0.8;
-        filter: blur(1px);
-        -webkit-filter: blur(1px);
-        transform: scale(1.08);
-        -webkit-transform: scale(1.08);
-        -moz-transform: scale(1.08);
-        -ms-transform: scale(1.08);
-        -o-transform: scale(1.08);
-    }
-
     100% {
         opacity: 1;
         filter: blur(0px);

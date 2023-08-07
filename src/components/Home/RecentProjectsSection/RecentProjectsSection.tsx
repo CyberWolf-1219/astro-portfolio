@@ -7,7 +7,7 @@ function RecentProjectsSection() {
     <section
       className={'shadow-md shadow-pallet-primary bg-pallet-primary-light'}>
       <div>
-        <h2>@Recent Projects Section&gt;_</h2>
+        <h2>@Recent Projects&gt;_</h2>
         {FEATURED_PROJECTS.length > 0 ? (
           <ul
             className={

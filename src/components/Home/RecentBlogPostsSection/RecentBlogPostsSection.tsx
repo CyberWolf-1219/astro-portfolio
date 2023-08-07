@@ -6,7 +6,7 @@ function RecentBlogPostsSection() {
   return (
     <section>
       <div>
-        <h2>@Recent Blog Posts Section&gt;_</h2>
+        <h2>@Recent Blog Posts&gt;_</h2>
         {RECENT_BLOG_POSTS.length > 0 ? (
           <ul
             className={

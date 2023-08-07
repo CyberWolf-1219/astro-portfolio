@@ -5,7 +5,7 @@ function SkillsSection() {
   return (
     <section>
       <div>
-        <h2>@Skills Section&gt;_</h2>
+        <h2>@Skills&gt;_</h2>
         <div className={'w-full h-fit py-[5px] bg-pallet-primary-light'}>
           <code className={'w-full h-fit text-pallet-accent'}>
             brain@dev&gt; ls user-skills

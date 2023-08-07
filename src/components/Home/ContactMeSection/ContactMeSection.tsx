@@ -80,7 +80,7 @@ function ContactMeSection() {
   return (
     <section>
       <div>
-        <h2>@Contact Me Section&gt;_</h2>
+        <h2>@Email Terminal&gt;_</h2>
         <form
           noValidate={false}
           className={'w-full mx-auto'}>
@@ -92,6 +92,7 @@ function ContactMeSection() {
             <div>X</div>
           </div>
           <textarea
+            defaultValue={'FOCUS THE TERMINAL TO ACTIVATE...'}
             onKeyDown={keydownHandler}
             onFocus={onFocusHandler}
             spellCheck={false}

@@ -6,7 +6,7 @@ function EducationSection() {
   return (
     <section>
       <div>
-        <h2>@Education Section&gt;_</h2>
+        <h2>@Education&gt;_</h2>
         <ul
           className={
             'w-full h-fit grid grid-cols-3 md:grid-cols-4 gap-[10px] items-center'

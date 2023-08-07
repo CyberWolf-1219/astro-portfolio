@@ -4,7 +4,7 @@ import HeroMainElement from '../HeroMainElement/HeroMainElement';
 function HeroSection() {
   return (
     <section
-      id={'about'}
+      id={'hero'}
       className={'w-full h-screen md:h-fit'}>
       <div
         className={
@@ -19,16 +19,67 @@ function HeroSection() {
         <div className={'md:absolute z-[2] top-[5%] left-[0%] w-fit h-fit'}>
           <h1
             className={
-              'text-center md:text-left lg:!text-8xl text-pallet-light '
+              'text-center md:text-left md:!text-4xl lg:!text-8xl text-pallet-light'
             }>
-            FULL-STACK DEVELOPER
+            I WAS BUILT IN THE WILD
           </h1>
-          <h2 className={'text-center md:text-left !text-xl md:!text-5xl'}>
-            SELF-TAUGHT FROM SCRATCH
+          <h2 className={'text-center md:text-left !text-xl md:!text-2xl'}>
+            THAT DOES NOT MEAN I'M WEAK
           </h2>
-          <p className={'text-center md:text-left md:text-2xl'}>
-            Tried Once & Got Addicted
+          <p className={'max-w-[55ch] text-center md:text-left md:text-base'}>
+            I'm a self-taught full-stack web developer. I strive to be the best
+            programmer you have ever met.
           </p>
+          <ul
+            className={
+              'w-full h-fit mt-[1rem] flex flex-row items-center justify-center md:justify-start gap-[1rem]'
+            }>
+            <li>
+              <a
+                href={'mailto:lahirua.rajakaruna@gmail.com'}
+                className={
+                  'w-fit h-fit px-[1em] py-[0.4em] bg-pallet-accent font-semibold leading-[1]'
+                }>
+                WORK WITH ME
+              </a>
+            </li>
+            <li>
+              <a
+                href={'https://www.linkedin.com/in/lahiru-anjana-rajakaruna/'}
+                target={'_blank'}
+                className={'w-fit h-fit '}>
+                <img
+                  src='/icon-linkedin.svg'
+                  alt='linked-in icon svg'
+                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href={'https://twitter.com/Lahiru_A_R'}
+                target={'_blank'}
+                className={'w-fit h-fit '}>
+                <img
+                  src='/icon-twitter.svg'
+                  alt='github icon svg'
+                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href={'https://github.com/CyberWolf-1219'}
+                target={'_blank'}
+                className={'w-fit h-fit '}>
+                <img
+                  src='/icon-github.svg'
+                  alt='github icon svg'
+                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

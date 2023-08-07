@@ -10,7 +10,7 @@ function Navigation() {
       }>
       <div
         className={
-          'w-full max-w-[1280px] h-fit mx-auto flex flex-col items-center justify-start gap-[15px]'
+          'w-full max-w-[1280px] h-fit mx-auto flex flex-col md:flex-row items-center justify-start md:justify-between gap-[15px]'
         }>
         <Logo />
         <ul
@@ -27,7 +27,7 @@ function Navigation() {
                 <a
                   href={link}
                   className={
-                    'flex flex-row items-center justify-start gap-[0.25em]'
+                    'flex flex-row items-center justify-start gap-[0.25em] text-lg'
                   }>
                   <img
                     src={icon}

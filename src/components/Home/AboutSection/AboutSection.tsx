@@ -14,7 +14,7 @@ function AboutSection() {
             src='/profile_image.svg'
             alt=''
             className={
-              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[4/3] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[1/1] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
             }
           />
           {ABOUT_ME.text.split('\n').map((para) => {

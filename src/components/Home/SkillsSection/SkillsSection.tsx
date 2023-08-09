@@ -6,21 +6,20 @@ function SkillsSection() {
     <section>
       <div>
         <h2>@Skills&gt;_</h2>
-        <div className={'w-full h-fit py-[5px] bg-pallet-primary-light'}>
-          <code className={'w-full h-fit text-pallet-accent'}>
-            brain@dev&gt; ls user-skills
-            <ul className={'w-full h-fit md:columns-3'}>
-              <li>---&nbsp;&nbsp;&nbsp;&nbsp;.</li>
-              <li>---&nbsp;&nbsp;&nbsp;&nbsp;..</li>
-              {USER_SKILLS.map((skill) => {
-                return (
-                  <li key={Math.random()}>
-                    ---&nbsp;&nbsp;&nbsp;&nbsp;{skill}
-                  </li>
-                );
-              })}
-            </ul>
-          </code>
+        <div
+          className={
+            'w-full h-fit py-[5px] flex flex-col items-center justify-start gap-[50px]'
+          }>
+          <img
+            src='/software_development.svg'
+            alt='lahiru anjana software development skills svg bubble graph'
+            className={'aspect-[16/9] w-full h-auto'}
+          />
+          <img
+            src='/web_development.svg'
+            alt='lahiru anjana web development skills svg bubble graph'
+            className={'aspect-[16/9] w-full h-auto'}
+          />
         </div>
       </div>
     </section>

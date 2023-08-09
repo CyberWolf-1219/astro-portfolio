@@ -38,7 +38,7 @@ function HeroSection() {
               <a
                 href={'mailto:lahirua.rajakaruna@gmail.com'}
                 className={
-                  'w-fit h-fit px-[1em] py-[0.4em] bg-pallet-accent font-semibold leading-[1]'
+                  'w-fit h-fit px-[1em] py-[0.4em] bg-pallet-accent font-semibold leading-[1] border-[2px] border-transparent hover:bg-transparent hover:text-white hover:border-pallet-accent transition-all duration-300'
                 }>
                 WORK WITH ME
               </a>
@@ -51,7 +51,9 @@ function HeroSection() {
                 <img
                   src='/icon-linkedin.svg'
                   alt='linked-in icon svg'
-                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                  className={
+                    'aspect-[1/1] w-[2rem] h-auto hover:scale-[1.1] transition-transform duration-300'
+                  }
                 />
               </a>
             </li>
@@ -63,7 +65,9 @@ function HeroSection() {
                 <img
                   src='/icon-twitter.svg'
                   alt='github icon svg'
-                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                  className={
+                    'aspect-[1/1] w-[2rem] h-auto hover:scale-[1.1] transition-transform duration-300'
+                  }
                 />
               </a>
             </li>
@@ -75,7 +79,9 @@ function HeroSection() {
                 <img
                   src='/icon-github.svg'
                   alt='github icon svg'
-                  className={'aspect-[1/1] w-[2rem] h-auto'}
+                  className={
+                    'aspect-[1/1] w-[2rem] h-auto hover:scale-[1.1] transition-transform duration-300'
+                  }
                 />
               </a>
             </li>

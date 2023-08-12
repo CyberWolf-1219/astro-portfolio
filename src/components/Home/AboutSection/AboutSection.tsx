@@ -17,9 +17,11 @@ function AboutSection() {
               'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[1/1] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
             }
           />
-          {ABOUT_ME.text.split('\n').map((para) => {
+          {ABOUT_ME.text.split('\n').map((para, index) => {
             return (
-              <p className={'mt-[1rem] text-justify md:columns-0 xl:columns-1'}>
+              <p
+                key={`about_me_para_${index}`}
+                className={'mt-[1rem] text-justify md:columns-0 xl:columns-1'}>
                 {para}
               </p>
             );

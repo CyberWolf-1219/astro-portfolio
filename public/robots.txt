@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lahiru-a-r.netlify.app/sitemap-index.xml

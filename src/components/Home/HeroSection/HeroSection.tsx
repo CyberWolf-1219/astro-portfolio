@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <section
       id={'hero'}
-      className={'w-full h-screen md:h-fit'}>
+      className={'w-full min-h-[80vh] md:h-fit'}>
       <div
         className={
           'relative z-[0] md:aspect-[16/9] w-full h-auto flex flex-col items-center justify-center overflow-hidden'
@@ -19,16 +19,13 @@ function HeroSection() {
         <div className={'md:absolute z-[2] top-[5%] left-[0%] w-fit h-fit'}>
           <h1
             className={
-              'text-center md:text-left md:!text-4xl lg:!text-8xl text-pallet-light'
+              'text-center !text-3xl md:text-left md:!text-4xl lg:!text-6xl text-pallet-light'
             }>
-            I WAS BUILT IN THE WILD
+            Full-Stack Typescript Developer
           </h1>
-          <h2 className={'text-center md:text-left !text-xl md:!text-2xl'}>
-            THAT DOES NOT MEAN I'M WEAK
-          </h2>
-          <p className={'max-w-[55ch] text-center md:text-left md:text-base'}>
-            I'm a self-taught full-stack web developer. I strive to be the best
-            programmer you have ever met.
+
+          <p className={'max-w-[55ch] text-center md:text-left'}>
+            Lets turn that idea of yours into reality together.
           </p>
           <ul
             className={

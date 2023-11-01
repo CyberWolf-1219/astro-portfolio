@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BlogSearchResultPanel from '../BlogSearchResultPanel/BlogSearchResultPanel';
 import BlogSearchEngine from '../BlogSearchEngine/BlogSearchEngine';
-import type { BlogPostSnippet } from '../../../types';
-import { DUMMY_POSTS } from '../../../data/blog';
+import ErrorBoundry from '../../Common/ErrorBoundry/ErrorBoundry';
+import { Contentful } from '../../../lib/contentful';
+import type { BlogPostSkeleton } from '../../../types';
+import type { Entry } from 'contentful';
+
+const CONTENTFUL = new Contentful();
+const entry_types = await CONTENTFUL.entryTypes();
+console.log(entry_types?.items[0]);
 
 function BlogSearchPanel() {
-  const [filteredBlogPosts, setFilteredBlogPosts] =
-    useState<Array<BlogPostSnippet>>(DUMMY_POSTS);
+  const [blogPosts, setBlogPosts] = useState<Entry<BlogPostSkeleton>[]>([]);
 
-  function filteredPostsReciever(posts: BlogPostSnippet[]) {
-    setFilteredBlogPosts(posts);
-  }
+  useEffect(() => {
+    console.log(blogPosts);
+
+    return () => {};
+  }, [blogPosts]);
+
+  useEffect(() => {
+    (async () => {
+      const entries = await CONTENTFUL.getEntries();
+      console.log(entries?.items[0].fields);
+      setBlogPosts(entries?.items!);
+    })();
+  }, []);
 
   return (
     <section
@@ -18,14 +33,21 @@ function BlogSearchPanel() {
         'w-full h-full p-[10px] bg-pallet-primary-light/50 backdrop-blur-[10px]'
       }>
       <div>
-        <BlogSearchEngine
-          allBlogPosts={DUMMY_POSTS}
-          postReciever={filteredPostsReciever}
-        />
-        <BlogSearchResultPanel blogPosts={filteredBlogPosts} />
+        <ErrorBoundry>
+          <BlogSearchEngine
+            allBlogPosts={[]}
+            postReciever={() => {}}
+          />
+        </ErrorBoundry>
+        <ErrorBoundry>
+          <BlogSearchResultPanel blogPosts={[]} />
+        </ErrorBoundry>
       </div>
     </section>
   );
 }
 
 export default BlogSearchPanel;
+
+// TODO: PASS BLOG POST ENTRIES TO THE SEARCH RESULT PANEL
+// TODO: PASS BLOG POST ENTIRES TO SEARCH ENGINE

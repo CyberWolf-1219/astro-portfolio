@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedProjectCard from '../FeaturedProjectCard/FeaturedProjectCard';
 import { FEATURED_PROJECTS } from '../../../data/featured_projects';
+import Error from '../../Common/Error/Error';
 
 function RecentProjectsSection() {
   return (
@@ -24,14 +25,7 @@ function RecentProjectsSection() {
             })}
           </ul>
         ) : (
-          <p
-            className={
-              'w-full h-fit my-[25px] p-[1.5rem] text-xl text-pallet-accent border-[5px] border-pallet-accent'
-            }>
-            <span>&#58;&#40;&nbsp;ERROR</span>
-            <br />
-            <span>&lt;NO PROJECTS HAS BEEN UPLOADED YET/&gt;</span>
-          </p>
+          <Error error={'NO PROJECTS HAS BEEN UPLOADED YET'} />
         )}
       </div>
     </section>

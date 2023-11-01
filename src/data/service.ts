@@ -111,38 +111,38 @@ export const SERVICES: ServiceCategory[] = [
   //     },
   //   ],
   // },
-  {
-    categoryID: 'webflow',
-    categoryName: 'WEBFLOW DEVELOPMENT',
-    categoryImage: {
-      imageLink: '/webflow.svg',
-      imageCaption: 'webflow development services',
-    },
-    categoryServices: [
-      {
-        serviceTitle: 'THEMES',
-        serviceImage: {
-          imageLink: '/service_icons/webflow.png',
-          imageCaption: 'html debugging service',
-        },
-      },
-    ],
-  },
-  {
-    categoryID: 'shopify',
-    categoryImage: {
-      imageLink: '/shopify.svg',
-      imageCaption: 'shopify development services',
-    },
-    categoryName: 'SHOPIFY DEVELOPMENT',
-    categoryServices: [
-      {
-        serviceTitle: 'THEMES',
-        serviceImage: {
-          imageLink: '/service_icons/shopify.png',
-          imageCaption: 'html debugging service',
-        },
-      },
-    ],
-  },
+  // {
+  //   categoryID: 'webflow',
+  //   categoryName: 'WEBFLOW DEVELOPMENT',
+  //   categoryImage: {
+  //     imageLink: '/webflow.svg',
+  //     imageCaption: 'webflow development services',
+  //   },
+  //   categoryServices: [
+  //     {
+  //       serviceTitle: 'THEMES',
+  //       serviceImage: {
+  //         imageLink: '/service_icons/webflow.png',
+  //         imageCaption: 'html debugging service',
+  //       },
+  //     },
+  //   ],
+  // },
+  // {
+  //   categoryID: 'shopify',
+  //   categoryImage: {
+  //     imageLink: '/shopify.svg',
+  //     imageCaption: 'shopify development services',
+  //   },
+  //   categoryName: 'SHOPIFY DEVELOPMENT',
+  //   categoryServices: [
+  //     {
+  //       serviceTitle: 'THEMES',
+  //       serviceImage: {
+  //         imageLink: '/service_icons/shopify.png',
+  //         imageCaption: 'html debugging service',
+  //       },
+  //     },
+  //   ],
+  // },
 ];

@@ -1,3 +1,5 @@
+import type { Asset, EntryFieldTypes } from 'contentful';
+
 export type EducationData = {
   course: string;
   description: {
@@ -16,23 +18,17 @@ export type BlogPostSnippet = {
   link: string;
 };
 
-export type BlogPost = {
-  postID: number;
-  createdDate: string;
-  author: string;
-  sections: BlogPostSection[];
-};
-
-export type BlogPostSection = {
-  type: 'hero' | 'sub';
-  heading: string;
-  text: string[];
-  image?: {
-    link: string;
-    caption: string;
-  };
-  links?: Array<{ caption: string; link: string }>;
-};
+export type BlogPostSkeleton = {
+  contentTypeId: "post";
+  fields: {
+    title: EntryFieldTypes.Text;
+    content: EntryFieldTypes.RichText;
+    createdDate: EntryFieldTypes.Date;
+    published: EntryFieldTypes.Boolean;
+    tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol<string>>;
+    heroImage: Asset;
+  }
+}
 
 export type Service = {
   serviceTitle: string;

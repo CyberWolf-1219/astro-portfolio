@@ -12,12 +12,9 @@ console.log(entry_types?.items[0]);
 
 function BlogSearchPanel() {
   const [blogPosts, setBlogPosts] = useState<Entry<BlogPostSkeleton>[]>([]);
-
-  useEffect(() => {
-    console.log(blogPosts);
-
-    return () => {};
-  }, [blogPosts]);
+  const [filteredBlogPosts, setFilteredBlogPosts] = useState<
+    Entry<BlogPostSkeleton>[]
+  >([]);
 
   useEffect(() => {
     (async () => {
@@ -27,6 +24,10 @@ function BlogSearchPanel() {
     })();
   }, []);
 
+  function recieveFilteredPosts(filteredPosts: Entry<BlogPostSkeleton>[]) {
+    setFilteredBlogPosts(filteredPosts);
+  }
+
   return (
     <section
       className={
@@ -35,8 +36,8 @@ function BlogSearchPanel() {
       <div>
         <ErrorBoundry>
           <BlogSearchEngine
-            allBlogPosts={[]}
-            postReciever={() => {}}
+            allBlogPosts={blogPosts}
+            postReciever={recieveFilteredPosts}
           />
         </ErrorBoundry>
         <ErrorBoundry>

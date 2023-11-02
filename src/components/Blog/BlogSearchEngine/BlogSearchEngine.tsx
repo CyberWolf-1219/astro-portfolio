@@ -1,37 +1,44 @@
-import React, { FormEvent, useRef } from 'react';
-import type { BlogPostSnippet } from '../../types';
+import React, { FormEvent, useEffect, useRef } from 'react';
+import ProgressBar from './ProgressBar';
+import type { BlogPostSkeleton } from '../../../types';
+import type { Entry } from 'contentful';
 
 interface Props {
-  allBlogPosts: BlogPostSnippet[];
-  postReciever: (posts: BlogPostSnippet[]) => void;
+  allBlogPosts: Entry<BlogPostSkeleton>[];
+  postReciever: (filteredPosts: Entry<BlogPostSkeleton>[]) => void;
 }
 
 function BlogSearchEngine({ allBlogPosts, postReciever }: Props) {
-  const timeOut = useRef<number>();
+  const timeOut = useRef<NodeJS.Timeout>();
   const progressbar = useRef<HTMLDivElement>(null);
+
+  function setProgress(currentProgress: number, fullProgress: number) {
+    const progress = (currentProgress / fullProgress) * 100;
+    progressbar.current!.style.transform = `scaleX(${progress}%)`;
+  }
+
+  function resetProgressBar() {
+    progressbar.current!.style.transform = `scaleX(${0}%)`;
+  }
 
   function filterPosts(query: string) {
     const filterPosts = allBlogPosts.filter((post, index) => {
-      const TAG_MATCH = post.tags.find((tag) => {
-        return tag.toLowerCase() == query;
-      });
-      const TITLE_MATCH = post.title.includes(query);
+      setProgress(index + 1, allBlogPosts.length);
+      const tags = post.fields.tags;
+      const title = post.fields.title;
 
-      if (TAG_MATCH || TITLE_MATCH) {
+      const isAMatch =
+        (title as string).includes(query) || (tags as string[]).includes(query);
+
+      if (isAMatch) {
         return post;
       }
-
-      const progress = ((index + 1) / allBlogPosts.length) * 100;
-      progressbar.current!.style.transform = `scaleX(${progress}%)`;
     });
 
     postReciever(filterPosts);
   }
 
-  function onQueryEnter(e: FormEvent<HTMLInputElement>) {
-    progressbar.current!.style.transform = `scaleX(${0}%)`;
-    const query = e.currentTarget.value;
-
+  function queuePostSearch(query: string) {
     if (timeOut.current) {
       clearTimeout(timeOut.current);
     }
@@ -41,15 +48,15 @@ function BlogSearchEngine({ allBlogPosts, postReciever }: Props) {
     }, 500);
   }
 
+  function onQueryEnter(e: FormEvent<HTMLInputElement>) {
+    const query = e.currentTarget.value;
+    resetProgressBar();
+    queuePostSearch(query);
+  }
+
   return (
     <form className={'sticky top-[0] z-[50] w-full h-fit bg-pallet-accent/90'}>
-      <div className={'absolute inset-0 z-[1] p-[5px] overflow-hidden'}>
-        <div
-          ref={progressbar}
-          className={
-            'w-[100%] h-full bg-pallet-accent origin-left scale-x-[0%] transition-transform duration-[100ms] ease-linear'
-          }></div>
-      </div>
+      <ProgressBar ref={progressbar} />
       <input
         type='text'
         name='query'

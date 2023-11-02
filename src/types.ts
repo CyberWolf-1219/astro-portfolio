@@ -1,4 +1,4 @@
-import type { Asset, EntryFieldTypes } from 'contentful';
+import type { EntryFieldTypes } from 'contentful';
 
 export type EducationData = {
   course: string;
@@ -26,7 +26,7 @@ export type BlogPostSkeleton = {
     createdDate: EntryFieldTypes.Date;
     published: EntryFieldTypes.Boolean;
     tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol<string>>;
-    heroImage: Asset;
+    heroImage: EntryFieldTypes.AssetLink;
   }
 }
 

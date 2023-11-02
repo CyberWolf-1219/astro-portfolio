@@ -1,11 +1,11 @@
 import React from 'react';
 import BlogPostSearchResultCard from '../BlogPostSearchResultCard/BlogPostSearchResultCard';
-import type { BlogPostSnippet } from '../../types';
+import type { BlogPostSkeleton } from '../../../types';
+import type { Entry } from 'contentful';
 
 interface Props {
-  blogPosts: Array<BlogPostSnippet>;
+  blogPosts: Entry<BlogPostSkeleton>[];
 }
-
 function BlogSearchResultPanel({ blogPosts }: Props) {
   return (
     <ul

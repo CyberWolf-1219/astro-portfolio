@@ -7,8 +7,6 @@ import type { BlogPostSkeleton } from '../../../types';
 import type { Entry } from 'contentful';
 
 const CONTENTFUL = new Contentful();
-const entry_types = await CONTENTFUL.entryTypes();
-console.log(entry_types?.items[0]);
 
 function BlogSearchPanel() {
   const [blogPosts, setBlogPosts] = useState<Entry<BlogPostSkeleton>[]>([]);
@@ -19,8 +17,8 @@ function BlogSearchPanel() {
   useEffect(() => {
     (async () => {
       const entries = await CONTENTFUL.getEntries();
-      console.log(entries?.items[0].fields);
       setBlogPosts(entries?.items!);
+      setFilteredBlogPosts(entries?.items!);
     })();
   }, []);
 
@@ -41,7 +39,7 @@ function BlogSearchPanel() {
           />
         </ErrorBoundry>
         <ErrorBoundry>
-          <BlogSearchResultPanel blogPosts={[]} />
+          <BlogSearchResultPanel blogPosts={filteredBlogPosts} />
         </ErrorBoundry>
       </div>
     </section>
@@ -49,6 +47,3 @@ function BlogSearchPanel() {
 }
 
 export default BlogSearchPanel;
-
-// TODO: PASS BLOG POST ENTRIES TO THE SEARCH RESULT PANEL
-// TODO: PASS BLOG POST ENTIRES TO SEARCH ENGINE

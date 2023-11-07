@@ -6,7 +6,7 @@ import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'hybrid',
+  output: 'server',
   site: 'https://lahiru-a-r.netlify.app',
   integrations: [react(), tailwind(), sitemap()],
   adapter: netlify(),

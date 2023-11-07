@@ -12,7 +12,7 @@ export const TOP_NAV_LINKS = [
   {
     text: 'Blog',
     icon: '/ui_icons/blog.png',
-    link: '/',
+    link: '/blog',
   },
 ];
 

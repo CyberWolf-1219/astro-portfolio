@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogPostLayout from '../../components/Blog/BlogPostLayout/BlogPostLayout';
+import { Contentful } from '../../lib/contentful';
+
+const params = Astro.params;
+const [POST_ID, SLUG] = params.slug?.split('/')!;
+
+const CONTENTFUL_CLIENT = new Contentful();
+const CONTENTFUL_POST = (await CONTENTFUL_CLIENT.getEntry('post', POST_ID))
+  ?.items[0];
+---
+
+<Layout title={CONTENTFUL_POST?.fields.title as string}>
+  <main>
+    <BlogPostLayout post={CONTENTFUL_POST} />
+  </main>
+</Layout>

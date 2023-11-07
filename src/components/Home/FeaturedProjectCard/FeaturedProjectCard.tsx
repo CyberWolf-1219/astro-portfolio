@@ -7,17 +7,35 @@ interface Props {
 
 function FeaturedProjectCard({ project }: Props) {
   return (
-    <div
+    <article
       className={
-        'relative z-[0] aspect-[4/5] w-full h-auto bg-pallet-primary border-[1px] border-pallet-accent shadow-[0px_0px_5px_-1px] shadow-pallet-accent'
+        'relative z-[0] aspect-[5/2] w-full h-auto flex flex-row bg-pallet-primary border-dashed border-[2px] text-pallet-accent border-pallet-accent shadow-[0px_0px_5px_-1px] shadow-pallet-accent'
       }>
-      <img
-        src={project.projectImage.imageLink}
-        alt={project.projectImage.imageCaption}
-        className={'absolute z-[1] w-full h-full object-cover'}
-      />
-      <h3 className={'!m-[0]'}>{project.projectTitle}</h3>
-    </div>
+      <header className={'flex-[2]'}>
+        <img
+          src={project.projectImage.imageLink}
+          alt={project.projectImage.imageCaption}
+          className={'w-full h-full object-cover'}
+        />
+      </header>
+      <div className={'relative flex-[3] w-full h-full p-[1rem]'}>
+        <h3
+          className={
+            '!mt-[0] border-b-[2px] border-dashed border-pallet-accent'
+          }>
+          {project.projectTitle}
+        </h3>
+        <p>{project.projectDesc}</p>
+        <a
+          href={project.projectLink}
+          target='popup'
+          className={
+            'absolute bottom-[1rem] right-[1rem] hover:text-pallet-accent'
+          }>
+          Visit Project &gt;&gt;
+        </a>
+      </div>
+    </article>
   );
 }
 

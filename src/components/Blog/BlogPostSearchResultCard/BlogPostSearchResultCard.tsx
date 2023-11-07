@@ -19,7 +19,7 @@ function BlogPostSearchResultCard({ postIndex, post, animationDelay }: Props) {
       className={`BlogPostSearchResultCard aspect-[10/3] w-full h-auto p-[1rem] flex flex-col md:flex-row items-center justify-start gap-[1rem] bg-pallet-accent/50 border-[2px] border-pallet-accent overflow-hidden delay-[${animationDelay}ms]`}>
       <div className={'aspect-[4/3] md:aspect-[1/1] w-auto h-full'}>
         <img
-          src={`https:${(post.fields.heroImage as Asset).fields.file?.url}`}
+          src={`https:${(post.fields.thumbnail as Asset).fields.file?.url}`}
           alt=''
           className={
             'shrink-0 aspect-[4/3] md:aspect-[1/1] w-full h-auto bg-pallet-primary'
@@ -37,10 +37,12 @@ function BlogPostSearchResultCard({ postIndex, post, animationDelay }: Props) {
           <small>{post.fields.createdDate as string}</small>
         </p>
         {documentToReactComponents(post.fields.content.content[0])}
-        <p>{post.fields.content.content[1]!.content[0].value}</p>
+        <p className={'line-clamp-4'}>
+          {post.fields.content.content[1].content[0].value}
+        </p>
         <p className={'w-full h-fit mt-auto text-left'}>
           <a
-            href={`/blog/${post.sys.id}`}
+            href={`/blog/${post.sys.id}/${post.fields.slug}`}
             className={'font-bold'}>
             Read Post &gt;&gt;
           </a>

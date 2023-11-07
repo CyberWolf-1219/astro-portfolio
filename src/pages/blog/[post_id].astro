@@ -1,20 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { BLOG_POSTS } from '../../data/blogposts';
 import BlogPostLayout from '../../components/Blog/BlogPostLayout/BlogPostLayout';
 
-export function getStaticPaths() {
-  const PATHS = BLOG_POSTS.map((post, index) => {
-    return { params: { post_id: index } };
-  });
-  return PATHS;
-}
 const params = Astro.params;
-console.log(Astro);
+
+const POST_ENTRY = undefined;
+const POST_TITLE = 'VIEW';
 ---
 
-<Layout title={`Post ${params.post_id} Title`}>
+<Layout title={POST_TITLE}>
   <main>
-    <BlogPostLayout postID={parseInt(params.post_id!)} />
+    <BlogPostLayout post={POST_ENTRY} />
   </main>
 </Layout>

@@ -6,8 +6,8 @@ export class Contentful {
 
   constructor() {
     this.client = createClient({
-      space: import.meta.env.PUBLIC_CONTENTFUL_SPACE_ID,
-      accessToken: import.meta.env.PUBLIC_CONTENTFUL_DELIVERY_TOKEN,
+      space: import.meta.env.PUBLIC_CONTENTFUL_SPACE_ID || process.env.PUBLIC_CONTENTFUL_SPACE_ID!,
+      accessToken: import.meta.env.PUBLIC_CONTENTFUL_DELIVERY_TOKEN || process.env.PUBLIC_CONTENTFUL_DELIVERY_TOKEN!,
     });
   }
 

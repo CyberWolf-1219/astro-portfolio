@@ -22,11 +22,14 @@ export type BlogPostSkeleton = {
   contentTypeId: "post";
   fields: {
     title: EntryFieldTypes.Text;
-    content: EntryFieldTypes.RichText;
+    heroImage: EntryFieldTypes.AssetLink;
+    thumbnail: EntryFieldTypes.AssetLink;
+    slug: EntryFieldTypes.Text;
+    summary: EntryFieldTypes.Text;
     createdDate: EntryFieldTypes.Date;
     published: EntryFieldTypes.Boolean;
     tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol<string>>;
-    heroImage: EntryFieldTypes.AssetLink;
+    content: EntryFieldTypes.RichText;
   }
 }
 

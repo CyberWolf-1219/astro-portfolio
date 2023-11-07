@@ -12,7 +12,7 @@ function RecentProjectsSection() {
         {FEATURED_PROJECTS.length > 0 ? (
           <ul
             className={
-              'w-full h-fit pb-[5px] flex flex-row items-center justify-start  md:grid grid-cols-3 gap-[10px] snap-x snap-mandatory overflow-x-auto'
+              'w-full h-fit pb-[5px] flex flex-col items-center justify-start  gap-[10px] snap-x snap-mandatory overflow-x-auto'
             }>
             {FEATURED_PROJECTS.map((project) => {
               return (

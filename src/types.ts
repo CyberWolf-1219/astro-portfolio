@@ -55,6 +55,7 @@ export type FeaturedProject = {
     imageCaption: string;
   };
   projectLink: string;
+  projectDesc: string;
 };
 
 export type RecentBlogPost = {

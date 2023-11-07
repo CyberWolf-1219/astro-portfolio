@@ -27,12 +27,16 @@ function BlogPostSearchResultCard({ postIndex, post, animationDelay }: Props) {
         />
       </div>
       <div className={'w-full h-full'}>
-        <h1
-          className={
-            'w-full h-fit !m-[0px] !text-2xl !font-semibold underline'
-          }>
-          {post.fields.title as string}
-        </h1>
+        <a
+          href={`/blog/${post.sys.id}/${post.fields.slug}`}
+          className={'font-bold'}>
+          <h2
+            className={
+              'w-full h-fit !m-[0px] !text-2xl !font-semibold underline'
+            }>
+            {post.fields.title as string}
+          </h2>
+        </a>
         <p className={'w-full h-fit text-left'}>
           <small>{post.fields.createdDate as string}</small>
         </p>
@@ -40,13 +44,7 @@ function BlogPostSearchResultCard({ postIndex, post, animationDelay }: Props) {
         <p className={'line-clamp-4'}>
           {post.fields.content.content[1].content[0].value}
         </p>
-        <p className={'w-full h-fit mt-auto text-left'}>
-          <a
-            href={`/blog/${post.sys.id}/${post.fields.slug}`}
-            className={'font-bold'}>
-            Read Post &gt;&gt;
-          </a>
-        </p>
+        <p className={'w-full h-fit mt-auto text-left'}></p>
       </div>
     </article>
   );

@@ -3,7 +3,7 @@ import { USER_SKILLS } from '../../../data/skills';
 
 function SkillsSection() {
   return (
-    <section>
+    <section className={'!h-fit'}>
       <div>
         <h2>@Skills&gt;_</h2>
         <div

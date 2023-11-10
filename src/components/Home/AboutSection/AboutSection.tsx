@@ -5,18 +5,18 @@ import { ABOUT_ME } from '../../../data/about_me';
 
 function AboutSection() {
   return (
-    <section className={'bg-pallet-primary-light'}>
+    <section className={'bg-pallet-primary'}>
       <div className={'w-full h-fit '}>
         <h2>@About Me&gt;_</h2>
-        <div
+        <article
           className={
-            'w-full h-fit flex flex-col md:block items-start justify-start'
+            'w-full h-fit flex flex-col md:block items-start justify-start text-pallet-accent'
           }>
           <img
             src='/profile_image.svg'
             alt=''
             className={
-              'shrink-0 aspect-[4/5] md:aspect-[1/1] xl:aspect-[1/1] w-full max-w-[400px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
+              'shrink-0 aspect-[4/5] md:aspect-[1/1] w-full max-w-[250px] h-auto md:mr-[10px] md:float-left bg-pallet-accent object-cover'
             }
           />
           <h3 className={'!text-2xl'}>{ABOUT_ME.title}</h3>
@@ -29,7 +29,7 @@ function AboutSection() {
               </p>
             );
           })}
-        </div>
+        </article>
       </div>
     </section>
   );

@@ -5,8 +5,7 @@ import Error from '../../Common/Error/Error';
 
 function RecentProjectsSection() {
   return (
-    <section
-      className={'shadow-md shadow-pallet-primary bg-pallet-primary-light'}>
+    <section className={'!h-fit bg-pallet-primary'}>
       <div>
         <h2>@Recent Projects&gt;_</h2>
         {FEATURED_PROJECTS.length > 0 ? (

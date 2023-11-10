@@ -7,11 +7,11 @@ function Navigation() {
   return (
     <nav
       className={
-        'px-[5%] py-[1rem] bg-pallet-primary-light shadow-md shadow-pallet-primary  text-pallet-light'
+        'w-full h-fit max-w-[1024px] mx-auto px-[5%] py-[1rem] bg-pallet-primary text-pallet-light border-[2px] border-dashed border-pallet-accent'
       }>
       <div
         className={
-          'w-full max-w-[1024px] h-fit mx-auto flex flex-col md:flex-row items-center justify-start md:justify-between gap-[1rem]'
+          'w-full max-w-[800px] h-fit mx-auto flex flex-col md:flex-row items-center justify-start md:justify-between gap-[1rem] '
         }>
         <Logo />
         <ul

@@ -9,7 +9,7 @@ function FeaturedProjectCard({ project }: Props) {
   return (
     <article
       className={
-        'relative z-[0] aspect-[5/2] w-full h-auto flex flex-row bg-pallet-primary border-dashed border-[2px] text-pallet-accent border-pallet-accent shadow-[0px_0px_5px_-1px] shadow-pallet-accent'
+        'relative z-[0] aspect-[5/2] w-full h-auto flex flex-row bg-pallet-primary text-pallet-accent '
       }>
       <header className={'flex-[2]'}>
         <img

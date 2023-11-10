@@ -91,7 +91,9 @@ const { title } = Astro.props;
   nav,
   footer {
     width: 100%;
+    max-width: 1024px;
     height: fit-content;
+    margin: auto;
   }
   footer > div {
     width: 100%;
@@ -104,16 +106,25 @@ const { title } = Astro.props;
     width: 100%;
     height: fit-content;
     margin: auto;
+    scroll-snap-type: mandatory;
   }
+
   section {
     width: 100%;
-    height: fit-content;
+    max-width: 1024px;
+    height: 100vh;
+    margin: auto;
     padding: 5% 2.5%;
-    scroll-snap-type: mandatory;
+
+    overflow: hidden;
+
+    border-left: 2px dashed var(--color-accent);
+    border-right: 2px dashed var(--color-accent);
+
     scroll-snap-align: start;
   }
   section > div {
-    max-width: 1024px;
+    max-width: 800px;
     margin: auto;
   }
 
